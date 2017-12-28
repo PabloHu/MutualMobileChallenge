@@ -35,17 +35,11 @@ public class ApiProvider {
                 .build();
     }
 
-    /*
-    public static Observable<PokemonEvolutionChainResponse> getPokemonObs(String pokemon) {
-        Retrofit retrofit = create();
-        ApiService apiService = retrofit.create(ApiService.class);
-        return apiService.getPokemonEvolutionChainResponse(pokemon);
-    }
-*/
+    
 
     public static Observable<RecipeResponse> getRecipeResponse (String recipeSearch) {
         Retrofit retrofit = create();
         ApiService apiService = retrofit.create(ApiService.class);
-        return apiService.getRecipeResponse(recipeSearch, "e124706a", "581332a6fc9bf6939343b66770f38718");
+        return apiService.getRecipeResponse(recipeSearch, "", "");
     }
 }
